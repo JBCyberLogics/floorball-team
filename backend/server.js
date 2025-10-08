@@ -41,8 +41,8 @@ app.use((err, _req, res, _next) => {
   });
 });
 
-// 404 handler
-app.use('*', (_req, res) => {
+// 404 handler - FIXED: Use proper route pattern
+app.use((_req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 
@@ -102,13 +102,17 @@ async function startServer() {
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
   console.log('\n🛑 Shutting down server gracefully...');
-  await mongoose.connection.close();
+  if (mongoose.connection.readyState !== 0) {
+    await mongoose.connection.close();
+  }
   process.exit(0);
 });
 
 process.on('SIGTERM', async () => {
   console.log('\n🛑 Server termination signal received...');
-  await mongoose.connection.close();
+  if (mongoose.connection.readyState !== 0) {
+    await mongoose.connection.close();
+  }
   process.exit(0);
 });
 
