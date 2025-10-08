@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beast Floorball Club</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./images/icon.png" />
+  <meta name="theme-color" content="#dc143c" />
+  <meta name="description" content="Official Floorball Team website" />
+  <style>
+    /* Page-scoped tiny tweaks */
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="./js/main.js"></script>
+  
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand"><img class="brand-logo" src="./images/icon.png" alt="BeastClub Logo"> BEAST CLUB</div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./pages/team.html">Team</a>
+      <a href="./pages/gallery.html">Gallery</a>
+      <a href="./pages/admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="background-image:url('./images/fl.jpg')">
+    <div class="hero-content container">
+      <h1>Forge Your Legacy. One Game at a Time.</h1>
+      <p>It’s not just a game. It’s the roar of the crowd, the whisper of the plastic, and the thunder of a goal. Welcome to Beast Floorball.</p>
+      <div class="hero-cta" style="margin-top:16px;text-align:center">
+        <a class="btn-cta btn-cta--crimson" href="./pages/team.html">Meet the Squad</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="upcoming-section reveal" id="upcoming-section" style="display:none;">
+      <div class="container">
+        <header class="section-header center">
+          <h2 class="section-title" id="upcoming-title" style="text-transform:uppercase;">Upcoming Event</h2>
+          <div class="accent-underline" aria-hidden="true"></div>
+          <p id="upcoming-desc" style="color:#cccccc;margin-top:8px"></p>
+        </header>
+        <div id="countdown" class="countdown-grid" aria-live="polite" aria-label="Countdown timer">
+          <div class="cd-box"><div class="num" id="cd-days">0</div><div class="label">DAYS</div></div>
+          <div class="cd-box"><div class="num" id="cd-hours">0</div><div class="label">HOURS</div></div>
+          <div class="cd-box"><div class="num" id="cd-mins">0</div><div class="label">MINUTES</div></div>
+          <div class="cd-box"><div class="num" id="cd-secs">0</div><div class="label">SECONDS</div></div>
+        </div>
+        <p id="countdown-note" class="center" style="color:#ccc;margin-top:12px"></p>
+      </div>
+    </section>
+    <section class="about-section reveal">
+      <div class="container">
+        <header class="section-header center">
+          <h2 class="section-title">Our Journey</h2>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+        <div class="about-card">
+          <p>Beast Floorball was born in the fire of passion and the echo of ambition.
+This is where dedication meets destiny — where ordinary turns extraordinary. Every practice, every match, every goal tells our story. Together, we rise, roar, and rewrite what it means to play with heart. This is more than a team. This is a force.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="coach-section reveal">
+      <div class="container">
+        <header class="section-header center">
+          <h2 class="section-title">Meet the Coach</h2>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+        <div class="coach-grid">
+          <div class="coach-photo">
+            <div class="circle-photo" style="background-image:url('./images/coach.jpg')"></div>
+          </div>
+          <div class="coach-bio portfolio-card">
+            <h3 class="coach-name">Boniface Nduati</h3>
+            <p class="coach-title">Head Coach · Beast Floorball</p>
+            <p class="coach-text">Driven by discipline and fueled by passion, we build players who outwork, outthink, and outperform — every game, every moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="captains-section reveal">
+      <div class="container">
+        <header class="section-header center">
+          <h2 class="section-title">The Leaders on the Court</h2>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+        <div class="captains-grid">
+          <article class="captain-card">
+            <div class="circle-photo" style="background-image:url('./images/captain-men.jpg')"></div>
+            <h3 class="captain-name">Men’s Team Captain</h3>
+            <p class="captain-quote">“Lead with heart. Finish with fire.”</p>
+          </article>
+          <article class="captain-card">
+            <div class="circle-photo" style="background-image:url('./images/captain-women.jpg')"></div>
+            <h3 class="captain-name">Women’s Team Captain</h3>
+            <p class="captain-quote">“Every play writes our story.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="contact-section reveal">
+      <div class="container">
+        <header class="section-header center">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="btn-cta btn-cta--crimson">Send Message</button>
+        </form>
+        <div class="social-icons fa-icons">
+          <a class="social-icon" href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-icon" href="https://www.facebook.com/groups/247891272863400/permalink/1378573203128529/?app=fbl" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-icon" href="https://vm.tiktok.com/ZMH7kPBFd3vnt-aRoRr/" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a class="social-icon" href="#" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p> JB-CYBER & LOGICS - All rights reserved© <span id="year"></span></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
+
+

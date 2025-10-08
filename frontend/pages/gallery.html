@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery · Beast Floorball Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/main.js"></script>
+  <meta name="theme-color" content="#ff4500" />
+  <meta name="description" content="Beast Floorball Club Gallery">
+  <link rel="icon" href="../images/icon.png" />
+  <style></style>
+  
+</head>
+<body>
+  <header class="navbar fixed">
+    <div class="brand"><img class="brand-logo" src="../images/icon.png" alt="BeastClub Logo"> BEAST CLUB</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="./team.html">Team</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <div class="container">
+        <header class="section-header center">
+          <h1 class="section-title">Gallery</h1>
+          <p class="section-subtitle">Moments that define the Beast.</p>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+
+        <div class="filter-tabs" role="tablist" aria-label="Filter gallery">
+          <button class="filter-tab active" data-filter="image" role="tab" aria-selected="true">Photos</button>
+          <button class="filter-tab" data-filter="video" role="tab" aria-selected="false">Videos</button>
+        </div>
+
+        <div id="gallery-grid" class="gallery-grid reveal" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
+      <div class="lightbox-backdrop" data-close></div>
+      <button class="lightbox-nav prev" aria-label="Previous" data-prev>‹</button>
+      <div class="lightbox-content" role="document"></div>
+      <button class="lightbox-nav next" aria-label="Next" data-next>›</button>
+      <button class="lightbox-close" aria-label="Close" data-close>✕</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">JB-CYBER & LOGICS - All rights reserved©.</div>
+  </footer>
+</body>
+</html>
+
+

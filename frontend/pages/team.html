@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Squad · Beast Floorball Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="theme-color" content="#ff4500" />
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+  <header class="navbar fixed">
+    <div class="brand"><img class="brand-logo" src="../images/icon.png" alt="BeastClub Logo"> BEAST CLUB</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="./team.html">Team</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="team-section">
+      <div class="container">
+        <header class="section-header center">
+          <h1 class="section-title">Meet the Squad</h1>
+          <p class="section-subtitle">Every player, every roar, every goal — together we are BEAST.</p>
+          <div class="accent-underline" aria-hidden="true"></div>
+        </header>
+
+        <div class="team-filters">
+          <button class="filter-tab active" data-team="men">Men</button>
+          <button class="filter-tab" data-team="women">Women</button>
+        </div>
+
+        <div class="team-grid reveal">
+          <section style="grid-column: span 12;">
+            <h2>Men’s Team</h2>
+            <div id="members-men" class="team-grid"></div>
+          </section>
+          <section style="grid-column: span 12;">
+            <h2>Women’s Team</h2>
+            <div id="members-women" class="team-grid"></div>
+          </section>
+          <section style="grid-column: span 12; text-align:center;">
+            <p id="teams-story" style="max-width:900px;margin:16px auto 0;color:#ccc;font-size:1.05rem;font-style:italic;line-height:1.7"></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">JB-CYBER & LOGICS - All rights reserved©</div>
+  </footer>
+</body>
+</html>
+
+

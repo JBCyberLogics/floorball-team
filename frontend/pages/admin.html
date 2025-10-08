@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin · Floorball Club</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand"><img class="brand-logo" src="../images/icon.png" alt="BeastClub Logo"> FLOORBALL CLUB</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="./team.html">Team</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main id="admin-page-root" class="container">
+    <section id="admin-login" class="card glass" style="padding:16px; max-width:520px; margin: 20px auto;">
+      <h2>Admin Login</h2>
+      <form id="login-form">
+        <label>
+          <span class="sr-only">Username</span>
+          <input type="text" name="username" placeholder="Username" required />
+        </label>
+        <label>
+          <span class="sr-only">Password</span>
+          <input type="password" name="password" placeholder="Password" required />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section id="admin-dashboard" class="hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h2>Dashboard</h2>
+        <button id="logout-btn" class="ghost">Logout</button>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+        <article class="card" style="padding:16px;">
+          <h3>Add Member</h3>
+          <form id="member-form">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="text" name="position" placeholder="Position" required />
+            <select name="team">
+              <option value="men" selected>Men</option>
+              <option value="women">Women</option>
+            </select>
+            <input type="file" name="photo" accept="image/*" />
+            <button type="submit">Add</button>
+          </form>
+        </article>
+
+        <article class="card" style="padding:16px;">
+          <h3>Upload Media</h3>
+          <form id="gallery-form">
+            <div id="upload-area" class="upload-area" tabindex="0">
+              <p><strong>Upload Media — Drag & Drop or Select Multiple Files</strong></p>
+              <p style="opacity:0.8">Images: .jpg, .jpeg, .png, .webp · Videos: .mp4, .mov, .avi, .webm</p>
+              <input id="media-input" type="file" name="media" accept="image/*,video/*" multiple style="display:none" />
+              <button type="button" id="select-files" class="ghost">Select Files</button>
+            </div>
+            <div id="preview-grid" class="preview-grid" aria-live="polite"></div>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:10px">
+              <button type="submit">Upload Selected</button>
+              <small id="upload-hint" style="opacity:0.7">Up to 10 files · Max 50MB total</small>
+            </div>
+          </form>
+        </article>
+
+        <article class="card" style="padding:16px;">
+          <h3>Upcoming Event</h3>
+          <form id="event-form">
+            <input type="text" name="title" placeholder="Event Title (optional)" />
+            <input type="date" name="date" />
+            <input type="time" name="time" />
+            <textarea name="description" rows="3" placeholder="Optional description/tagline"></textarea>
+            <button type="submit">Save Event</button>
+          </form>
+        </article>
+
+        <article class="card" style="padding:16px;">
+          <h3>Teams Story</h3>
+          <form id="teams-story-form">
+            <textarea name="story" rows="5" placeholder="Story paragraph under teams section..."></textarea>
+            <button type="submit">Save Story</button>
+          </form>
+        </article>
+
+      </div>
+
+      <section>
+        <h3>Members</h3>
+        <div class="card" style="padding:8px; overflow:auto;">
+          <table id="members-table" class="table">
+            <thead>
+              <tr><th>Photo</th><th>Name</th><th>Position</th><th>Team</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h3>Gallery</h3>
+        <div class="card" style="padding:8px; overflow:auto;">
+          <table id="gallery-table" class="table">
+            <thead>
+              <tr><th>Type</th><th>File</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Admin tools are for local use only.</div>
+  </footer>
+</body>
+</html>
+
+
