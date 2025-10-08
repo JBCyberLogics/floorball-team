@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://beast-team.onrender.com/api';
 
 function toAbsoluteMediaUrl(url) {
   if (!url) return url;
