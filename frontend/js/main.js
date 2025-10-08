@@ -1,4 +1,4 @@
-const API_BASE = 'https://beast-team.onrender.com/api';
+const API_BASE = window.API_BASE_URL || 'https://beast-team.onrender.com/api';
 
 function toAbsoluteMediaUrl(url) {
   if (!url) return url;
