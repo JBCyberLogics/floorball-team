@@ -7,6 +7,45 @@ function toAbsoluteMediaUrl(url) {
   return url;
 }
 
+// Add this at the very top of your main.js
+console.log('🚀 Frontend loaded on page:', window.location.pathname);
+
+// Enhanced init functions with better debugging
+async function initTeamPage() {
+  console.log('🔍 Checking for team page elements...');
+  const mount = document.getElementById('members-grid');
+  const menMount = document.getElementById('members-men');
+  const womenMount = document.getElementById('members-women');
+  
+  console.log('Team elements found:', {
+    membersGrid: mount,
+    menTeam: menMount,
+    womenTeam: womenMount
+  });
+  
+  if (!mount && !menMount && !womenMount) {
+    console.log('❌ Not on team page - no team elements found');
+    return;
+  }
+  
+  console.log('✅ On team page - loading team data...');
+  // Rest of your team page code...
+}
+
+async function initGalleryPage() {
+  console.log('🔍 Checking for gallery page elements...');
+  const mount = document.getElementById('gallery-grid');
+  console.log('Gallery element found:', mount);
+  
+  if (!mount) {
+    console.log('❌ Not on gallery page - no gallery element found');
+    return;
+  }
+  
+  console.log('✅ On gallery page - loading gallery data...');
+  // Rest of your gallery page code...
+}
+
 // In-memory token only; cleared on refresh by design
 let MEMORY_TOKEN = null;
 function getToken() { return MEMORY_TOKEN; }
