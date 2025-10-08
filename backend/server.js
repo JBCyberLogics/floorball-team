@@ -4,7 +4,10 @@ require('dotenv').config();
 const { connectDatabase } = require('./config/db');
 
 const app = express();
-
+app.use('/api/admin', adminRoutes);
+app.use('/api/members', memberRoutes);
+app.use('/api/gallery', galleryRoutes);
+app.use('/api/settings', settingsRoutes);
 app.use(cors());
 app.use(express.json());
 
