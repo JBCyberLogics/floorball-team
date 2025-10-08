@@ -72,4 +72,42 @@ async function connectDatabase() {
   }
 }
 
+module.exports = { connectDatabase };  
+  try {
+    mongoose.set('strictQuery', true);
+    const conn = await mongoose.connect(mongoUri, {
+      serverSelectionTimeoutMS: 15000,
+      socketTimeoutMS: 45000,
+      bufferCommands: false,
+      maxPoolSize: 10,
+    });
+    
+    console.log('✅ MongoDB connected successfully');
+    console.log(`📊 Database: ${conn.connection.name}`);
+    console.log(`🏠 Host: ${conn.connection.host}`);
+    
+    // Connection event handlers
+    mongoose.connection.on('error', (err) => {
+      console.error('❌ MongoDB connection error:', err);
+    });
+
+    mongoose.connection.on('disconnected', () => {
+      console.log('⚠️  MongoDB disconnected');
+    });
+
+    mongoose.connection.on('reconnected', () => {
+      console.log('🔁 MongoDB reconnected');
+    });
+    
+  } catch (error) {
+    console.error('❌ MongoDB connection failed:', error.message);
+    console.log('💡 Troubleshooting tips:');
+    console.log('   1. Check if your MongoDB Atlas cluster is running');
+    console.log('   2. Verify your username/password are correct');
+    console.log('   3. Check your IP whitelist in MongoDB Atlas');
+    console.log('   4. Ensure the database name is correct');
+    throw error;
+  }
+}
+
 module.exports = { connectDatabase };
