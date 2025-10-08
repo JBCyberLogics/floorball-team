@@ -3,6 +3,11 @@ const cors = require('cors');
 require('dotenv').config();
 const { connectDatabase } = require('./config/db');
 
+const adminRoutes = require('./routes/adminRoutes');
+const memberRoutes = require('./routes/memberRoutes');
+const galleryRoutes = require('./routes/galleryRoutes');
+const settingsRoutes = require('./routes/settingsRoutes');
+
 const app = express();
 app.use('/api/admin', adminRoutes);
 app.use('/api/members', memberRoutes);
